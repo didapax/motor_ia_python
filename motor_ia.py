@@ -70,7 +70,11 @@ def analiza_pregunta(pregunta, tipo, base):
     #base puede ser: "local", "mongo;host_backed_parametro_busqueda_GET",...
     palabras = pregunta.split()  # Divide la cadena en palabras
     ultima_palabra = palabras[-1] if palabras else ""  # Obtiene la última palabra
-    return responder(ultima_palabra, tipo, base)
+    result = responder(pregunta, tipo, base)
+    if result == "":
+        result = responder(ultima_palabra, tipo, base)
+    
+    return result
 
 
 def responder(text, tipo, base):
