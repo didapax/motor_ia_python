@@ -1,0 +1,65 @@
+[
+    {
+        "SALUDOS": {
+            "explica": "HOLA",
+            "respuesta": "SALUDOS, ESTOY AQI PARA ATENDER TUS SOLICITUDES",
+            "otra_pregunta": "CUALQUIER PREGUNTA QUE TENGAS ESTOY PARA ATENDERTE"
+        }
+    },
+    {
+        "HOLA": {
+            "explica": "HOLA",
+            "respuesta": "SALUDOS, ESTOY AQI PARA ATENDER TUS SOLICITUDES",
+            "otra_pregunta": "CUALQUIER PREGUNTA QUE TENGAS ESTOY PARA ATENDERTE"
+        }
+    },
+    {
+        "ADAN": {
+            "explica": "MI NOMBRE ES ADAN",
+            "respuesta": "SOY ADAN UN ASISTENTE VIRTUAL",
+            "otra_pregunta": "CUALQUIER PREGUNTA QUE TENGAS ESTOY PARA ATENDERTE"
+        }
+    },
+    {
+        "EXIT": {
+            "explica": "DESEAS SALIR",
+            "respuesta": "ESTERE AQUI POR SI ME NECESITAS",
+            "otra_pregunta": "QUE LA PASES BIEN"
+        }
+    },
+    {
+        "GRACIAS": {
+            "explica": "DE NADA",
+            "respuesta": "DE NADA, ESTOY AQUI PARA AYUDARTE",
+            "otra_pregunta": "CUALQUIER COSA NO DUDES EN PREGUNTAR"
+        }
+    },
+    {
+        "AGRADECIDO": {
+            "explica": "DE NADA",
+            "respuesta": "DE NADA, ESTOY AQUI PARA AYUDARTE",
+            "otra_pregunta": "CUALQUIER COSA NO DUDES EN PREGUNTAR"
+        }
+    },
+    {
+        "COMO TE LLAMAS": {
+            "explica": "ADAN",
+            "respuesta": "ADAN ES M NIMBRE, SOY UN ASISTENTE VIRTUAL",
+            "otra_pregunta": "SI TIENES ALGUNA PREGUNTA ESTOY PARA AYUDARTE"
+        }
+    },
+    {
+        "QUIEN ERES": {
+            "explica": "ADAN",
+            "respuesta": "ADAN, SAOY UN ASISTENTE VIRTUAL",
+            "otra_pregunta": "ESTOY PARA AYUDARTE NO DUDES EN PREGUNTAR"
+        }
+    },
+    {
+        "CUAL ES TU NOMBRE": {
+            "explica": "ADAN",
+            "respuesta": "ADAN, SAOY UN ASISTENTE VIRTUAL",
+            "otra_pregunta": "ESTOY PARA AYUDARTE NO DUDES EN PREGUNTAR"
+        }
+    }
+]
