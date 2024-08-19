@@ -7,7 +7,9 @@ import json
 import requests
 import random
 import time
-
+from urllib.parse import quote
+from urllib.error import URLError, HTTPError
+from bs4 import BeautifulSoup
 
 def leer_archivo_json(ruta_archivo):
     try:
@@ -123,6 +125,7 @@ def interrogante(text):
         "SABES",
         "HABLAME",
         "CUAL",
+        "COMO",
         "CONOCES"
     }
     tokens = text.upper().split()  # Convertimos a mayúsculas y dividimos por espacios
@@ -133,11 +136,23 @@ def analiza_pregunta(pregunta, tipo, base):
     #base puede ser: "local", "mongo;host_backed_parametro_busqueda_GET",...
     rand = randomBoolean()
     result = responder(pregunta, rand, base)
-    if result == "":
+    if not result:
         if interrogante(pregunta):
-            palabras = pregunta.split()  # Divide la cadena en palabras
+            palabras = pregunta.split()  # Divide la cadena en palabras            
             ultima_palabra = palabras[-1] if palabras else ""  # Obtiene la última palabra
+            penultima_palabra = palabras[-2] if palabras else ""
             result = responder(ultima_palabra, tipo, base)
+            if not result:
+                compuesto = f"{penultima_palabra} {ultima_palabra}"
+                result = responder(compuesto, tipo, base)
+                
+                if not result:                         
+                    result = buscarRespuestaInternet(ultima_palabra.capitalize())                    
+                
+                    if not result:
+                        compuesto = f"{penultima_palabra.capitalize()}_{ultima_palabra.capitalize()}" 
+                        time.sleep(1)
+                        result = buscarRespuestaInternet(compuesto)
 
     return result
 
@@ -168,6 +183,34 @@ def responder(text, tipo, base):
     
     return mensaje
     
+
+def buscarRespuestaInternet(text):
+    # Codificar el texto para que sea una URL válida
+    encoded_text = quote(text)
+    url = f"https://es.wikipedia.org/wiki/{encoded_text}"
+    try:
+        response = requests.get(url)
+        if response.status_code == 200:
+            # Parsear el contenido HTML de la página
+            soup = BeautifulSoup(response.content, 'html.parser')
+
+            # Iterar sobre todos los párrafos y seleccionar el primero que contenga texto significativo
+            paragraphs = soup.find_all('p')
+            for paragraph in paragraphs:
+                text = paragraph.get_text().strip()
+                if len(text) > 10:  # Asegurarse de que el párrafo no esté vacío o sea muy corto
+                    return text
+
+            return "No se encontró información suficiente."
+        else:
+            return f"Error al realizar la solicitud: {response.status_code}"
+    except HTTPError as e:
+        return f"El servidor no pudo cumplir con la solicitud: {e}"
+    except URLError as e:
+        return f"La URL no es válida o no está accesible: {e}"
+    except Exception as e:
+        return f"Ocurrió un error inesperado: {e}"
+
 
 def buscaRespuesta(datos, tipo):    
     explica = datos.get('explica', '')
