@@ -1,0 +1,21 @@
+{
+  "session_id": "8959ef3d-c0ef-4a51-ba3b-7327902d5240",
+  "area": "clinica",
+  "inicio": "2026-06-14T18:45:13.214276",
+  "ultimo_acceso": "2026-06-14T18:45:13.214454",
+  "total_mensajes": 2,
+  "mensajes": [
+    {
+      "rol": "usuario",
+      "mensaje": "hola",
+      "fuente": "",
+      "timestamp": "2026-06-14T18:45:13.214323"
+    },
+    {
+      "rol": "adan",
+      "mensaje": "¡Buenos días! Estoy aquí para atender sus consultas sobre nuestros servicios médicos.\n\n¿Necesita información sobre citas, horarios o servicios?",
+      "fuente": "local",
+      "timestamp": "2026-06-14T18:45:13.214449"
+    }
+  ]
+}

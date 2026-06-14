@@ -1,0 +1,12 @@
+{
+    "nombre": "Asistente Médico",
+    "descripcion": "Atención al paciente — Clínica San José",
+    "avatar": "🏥",
+    "color_primario": "#0ea5e9",
+    "color_secundario": "#06b6d4",
+    "tema_restriccion": "salud, clínica, medicina y atención al paciente",
+    "mensaje_fuera_area": "Ese tema está fuera de mi área de atención. Para consultas generales comuníquese a recepción: 📞 555-1234 o escríbanos a info@clinica.com",
+    "permitir_busqueda_web": false,
+    "permitir_aprendizaje": false,
+    "pin_admin": "2024"
+}

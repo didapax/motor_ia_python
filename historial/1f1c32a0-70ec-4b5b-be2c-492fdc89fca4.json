@@ -1,0 +1,21 @@
+{
+  "session_id": "1f1c32a0-70ec-4b5b-be2c-492fdc89fca4",
+  "area": "general",
+  "inicio": "2026-06-14T18:45:13.213409",
+  "ultimo_acceso": "2026-06-14T18:45:13.213668",
+  "total_mensajes": 2,
+  "mensajes": [
+    {
+      "rol": "usuario",
+      "mensaje": "hola",
+      "fuente": "",
+      "timestamp": "2026-06-14T18:45:13.213473"
+    },
+    {
+      "rol": "adan",
+      "mensaje": "¡Buenas! Dime, ¿qué necesitas?\n\n¿En qué puedo ayudarte hoy?",
+      "fuente": "local",
+      "timestamp": "2026-06-14T18:45:13.213661"
+    }
+  ]
+}

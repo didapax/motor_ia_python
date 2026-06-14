@@ -1,0 +1,21 @@
+{
+  "session_id": "f44d83c7-79cf-490c-9a8d-6482a5aa868d",
+  "area": "clinica",
+  "inicio": "2026-06-14T18:45:13.218812",
+  "ultimo_acceso": "2026-06-14T18:45:13.220421",
+  "total_mensajes": 2,
+  "mensajes": [
+    {
+      "rol": "usuario",
+      "mensaje": "que es python",
+      "fuente": "",
+      "timestamp": "2026-06-14T18:45:13.218887"
+    },
+    {
+      "rol": "adan",
+      "mensaje": "Ese tema está fuera de mi área de atención. Para consultas generales comuníquese a recepción: 📞 555-1234 o escríbanos a info@clinica.com",
+      "fuente": "restriccion",
+      "timestamp": "2026-06-14T18:45:13.220411"
+    }
+  ]
+}

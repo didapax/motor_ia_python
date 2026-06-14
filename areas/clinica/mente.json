@@ -1,0 +1,146 @@
+[
+    {
+        "HOLA": {
+            "respuestas": [
+                "¡Hola! Bienvenido a la Clínica San José. Soy el asistente virtual de atención al paciente. ¿En qué puedo ayudarle?",
+                "¡Buenos días! Estoy aquí para atender sus consultas sobre nuestros servicios médicos."
+            ],
+            "explica": "Saludo inicial del paciente",
+            "otra_pregunta": "¿Necesita información sobre citas, horarios o servicios?",
+            "sinonimos": ["SALUDOS", "BUENAS", "BUENOS DIAS", "BUENAS TARDES"],
+            "intencion": "saludo"
+        }
+    },
+    {
+        "CITA": {
+            "respuestas": [
+                "Para agendar su cita puede llamar al 📞 555-1234 de lunes a viernes de 7:00 AM a 6:00 PM, o sábados de 8:00 AM a 12:00 PM.",
+                "Las citas se pueden agendar llamando al 📞 555-1234 o visitando nuestra recepción. ¿Prefiere mañana o tarde?"
+            ],
+            "explica": "Información para agendar cita médica",
+            "otra_pregunta": "¿Necesita información sobre qué documentos traer?",
+            "sinonimos": ["TURNO", "CONSULTA", "AGENDAR", "RESERVAR", "QUIERO UNA CITA", "NECESITO CITA"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "HORARIOS": {
+            "respuestas": [
+                "Nuestros horarios de atención son: Lunes a Viernes: 7:00 AM — 8:00 PM | Sábados: 8:00 AM — 2:00 PM | Domingos: Solo emergencias.",
+                "Atendemos de lunes a viernes de 7AM a 8PM, sábados de 8AM a 2PM. Para emergencias estamos disponibles 24/7."
+            ],
+            "explica": "Horarios de atención de la clínica",
+            "otra_pregunta": "¿Necesita el horario de alguna especialidad en particular?",
+            "sinonimos": ["HORA", "CUANDO ATIENDEN", "QUE HORA ABREN", "HORARIO"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "ESPECIALIDADES": {
+            "respuestas": [
+                "Contamos con las siguientes especialidades: Medicina General, Pediatría, Ginecología, Cardiología, Dermatología, Ortopedia y Nutrición.",
+                "Nuestras especialidades médicas incluyen: Medicina General, Pediatría, Cardiología, Dermatología, Ginecología y Ortopedia."
+            ],
+            "explica": "Especialidades médicas disponibles",
+            "otra_pregunta": "¿Le interesa alguna especialidad en particular?",
+            "sinonimos": ["MEDICOS", "DOCTORES", "QUE ESPECIALIDADES TIENEN", "AREAS"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "LABORATORIO": {
+            "respuestas": [
+                "Nuestro laboratorio clínico atiende de lunes a sábado de 6:30 AM a 4:00 PM. Se recomienda asistir en ayunas para exámenes de sangre.",
+                "El laboratorio está disponible de 6:30 AM a 4:00 PM. Para exámenes de sangre venga en ayunas de 8-12 horas."
+            ],
+            "explica": "Información del laboratorio clínico",
+            "otra_pregunta": "¿Necesita información sobre preparación para algún examen específico?",
+            "sinonimos": ["EXAMENES", "ANALISIS", "SANGRE", "EXAMEN DE SANGRE", "LAB"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "DOCUMENTOS": {
+            "respuestas": [
+                "Para su consulta debe traer: Cédula de identidad o documento de identificación, tarjeta de seguro médico (si aplica) y resultados de exámenes previos relacionados.",
+                "Documentos requeridos: Identificación vigente, carnet de seguro (si tiene) y cualquier examen o historial médico previo relevante."
+            ],
+            "explica": "Documentos necesarios para consulta",
+            "otra_pregunta": "¿Tiene alguna pregunta adicional sobre su visita?",
+            "sinonimos": ["QUE TRAER", "QUE NECESITO", "REQUISITOS", "PAPELES"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "EMERGENCIAS": {
+            "respuestas": [
+                "🚨 Para emergencias médicas llame al 911 o diríjase directamente a nuestra sala de urgencias, disponible las 24 horas en Av. Principal #100.",
+                "🚨 Urgencias 24 horas: Av. Principal #100. Línea de emergencias: 📞 555-9911. ¡Su salud es nuestra prioridad!"
+            ],
+            "explica": "Información de emergencias médicas",
+            "otra_pregunta": "¿Necesita la dirección exacta?",
+            "sinonimos": ["URGENCIAS", "EMERGENCIA", "ES URGENTE", "URGENTE"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "UBICACION": {
+            "respuestas": [
+                "Estamos ubicados en Avenida Principal #100, a dos cuadras del Parque Central. Contamos con estacionamiento propio.",
+                "Nuestra dirección es Av. Principal #100. Puede llegar en bus tomando la línea 12 o 15, parada Clínica San José."
+            ],
+            "explica": "Ubicación de la clínica",
+            "otra_pregunta": "¿Necesita indicaciones para llegar?",
+            "sinonimos": ["DIRECCION", "DONDE ESTAN", "COMO LLEGAR", "DONDE QUEDA"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "PRECIOS": {
+            "respuestas": [
+                "Las tarifas varían según la especialidad. Una consulta general cuesta $25. Para información específica de precios llame al 📞 555-1234.",
+                "Consulta general: $25 | Especialistas: $40-$80 | Aceptamos efectivo, tarjeta y varios seguros médicos."
+            ],
+            "explica": "Información de precios y tarifas",
+            "otra_pregunta": "¿Trabajan con su seguro médico? ¿Cuál tiene?",
+            "sinonimos": ["COSTO", "CUANTO CUESTA", "TARIFA", "VALOR", "COBRAN"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "SEGUROS": {
+            "respuestas": [
+                "Trabajamos con los principales seguros médicos: Seguros del Estado, AXA, ASSA, Pan-American Life, y seguro social. Consulte con recepción por su plan.",
+                "Aceptamos la mayoría de seguros médicos nacionales. Llame al 📞 555-1234 para verificar si cubrimos su seguro."
+            ],
+            "explica": "Información de seguros médicos aceptados",
+            "otra_pregunta": "¿Necesita verificar si aceptamos su seguro específico?",
+            "sinonimos": ["SEGURO", "ASEGURADORA", "PLAN MEDICO", "COBERTURA"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "GRACIAS": {
+            "respuestas": [
+                "Con mucho gusto. En la Clínica San José su salud es nuestra prioridad. ¡Que se cuide!",
+                "¡De nada! Para cualquier otra consulta estamos a su disposición. ¡Hasta pronto!"
+            ],
+            "explica": "Agradecimiento del paciente",
+            "otra_pregunta": "",
+            "sinonimos": ["MUCHAS GRACIAS", "TE LO AGRADEZCO", "AGRADECIDO"],
+            "intencion": "agradecimiento"
+        }
+    },
+    {
+        "ADIOS": {
+            "respuestas": [
+                "¡Hasta luego! Recuerde que su salud es lo más importante. En la Clínica San José estamos para servirle. 🏥",
+                "¡Adiós! Esperamos verle pronto. Cuídese mucho."
+            ],
+            "explica": "Despedida del paciente",
+            "otra_pregunta": "",
+            "sinonimos": ["HASTA LUEGO", "CHAO", "BYE", "NOS VEMOS"],
+            "intencion": "despedida"
+        }
+    }
+]

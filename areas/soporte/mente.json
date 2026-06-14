@@ -1,0 +1,134 @@
+[
+    {
+        "HOLA": {
+            "respuestas": [
+                "¡Hola! Soy el asistente de Soporte Técnico. Estoy aquí para ayudarte a resolver problemas de sistemas y tecnología. ¿Cuál es tu problema?",
+                "¡Hola! Mesa de Ayuda TI. ¿Con qué puedo ayudarte hoy?"
+            ],
+            "explica": "Saludo inicial",
+            "otra_pregunta": "¿Tu problema es de hardware, software o red?",
+            "sinonimos": ["SALUDOS", "BUENOS DIAS", "BUENAS"],
+            "intencion": "saludo"
+        }
+    },
+    {
+        "CONTRASENA": {
+            "respuestas": [
+                "Para restablecer tu contraseña: 1) Ve a la página de login, 2) Haz clic en '¿Olvidaste tu contraseña?', 3) Ingresa tu correo corporativo, 4) Revisa tu bandeja de entrada.",
+                "Si olvidaste tu contraseña: accede a https://reset.empresa.com o llama a soporte al ext. 200 para que un técnico te asista."
+            ],
+            "explica": "Procedimiento para recuperar contraseña",
+            "otra_pregunta": "¿Lograste restablecer el acceso?",
+            "sinonimos": ["CLAVE", "PASSWORD", "OLVIDE MI CLAVE", "NO PUEDO ENTRAR", "ACCESO", "USUARIO"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "INTERNET": {
+            "respuestas": [
+                "Pasos para solucionar problemas de internet: 1) Reinicia el router (desconecta 30 segundos), 2) Reconecta tu equipo a la red, 3) Si persiste llama a soporte ext. 200.",
+                "Sin internet: Verifica que el cable esté bien conectado, reinicia el router y tu equipo. Si el problema continúa crea un ticket en helpdesk.empresa.com"
+            ],
+            "explica": "Solución a problemas de conectividad de internet",
+            "otra_pregunta": "¿Se resolvió el problema de conexión?",
+            "sinonimos": ["SIN INTERNET", "NO HAY RED", "RED", "WIFI", "CONEXION", "NO ME CONECTA"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "IMPRESORA": {
+            "respuestas": [
+                "Para problemas de impresora: 1) Verifica que esté encendida y conectada, 2) En Windows: Panel de Control → Dispositivos → clic derecho en impresora → 'Establecer como predeterminada', 3) Si sigue sin funcionar crea un ticket.",
+                "Solución impresora: Reinicia la impresora, cancela todos los trabajos de impresión pendientes en cola, y vuelve a intentar. Si persiste, ext. 200."
+            ],
+            "explica": "Solución a problemas de impresora",
+            "otra_pregunta": "¿Cuál es el modelo de impresora que tienes?",
+            "sinonimos": ["NO IMPRIME", "IMPRIMIR", "PRINTER"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "CORREO": {
+            "respuestas": [
+                "Para problemas con el correo corporativo: 1) Verifica tu conexión a internet, 2) Comprueba usuario/contraseña, 3) Accede vía web en mail.empresa.com para descartar problema local.",
+                "Si Outlook no abre o no sincroniza: Cierra y vuelve a abrir la aplicación. Si no funciona, usa la versión web en mail.empresa.com"
+            ],
+            "explica": "Soporte para correo electrónico corporativo",
+            "otra_pregunta": "¿El problema es en Outlook, app móvil o webmail?",
+            "sinonimos": ["EMAIL", "MAIL", "OUTLOOK", "NO LLEGAN CORREOS", "CORREO ELECTRONICO"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "COMPUTADORA LENTA": {
+            "respuestas": [
+                "Para un equipo lento: 1) Reinicia el equipo, 2) Cierra programas innecesarios, 3) Ejecuta limpieza de disco (Cleanmgr en Windows), 4) Si persiste crea un ticket para revisión técnica.",
+                "Equipo lento: Verifica que no tengas muchos programas abiertos, reinicia el equipo. Si tiene más de 5 años puede necesitar actualización de RAM o disco SSD."
+            ],
+            "explica": "Solución para computadora lenta",
+            "otra_pregunta": "¿Cuánta RAM tiene tu equipo?",
+            "sinonimos": ["PC LENTA", "EQUIPO LENTO", "MUY LENTO", "TARDA MUCHO", "LENTO"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "TICKET": {
+            "respuestas": [
+                "Para crear un ticket de soporte: accede a helpdesk.empresa.com con tu usuario corporativo, selecciona la categoría del problema y describe el inconveniente.",
+                "Crea tu ticket en helpdesk.empresa.com o llámanos al ext. 200. Tiempo de respuesta: urgente 1h, normal 4h, baja prioridad 24h."
+            ],
+            "explica": "Información sobre creación de tickets de soporte",
+            "otra_pregunta": "¿Necesitas ayuda para describir el problema en el ticket?",
+            "sinonimos": ["REPORTE", "REPORTAR", "ABRIR CASO", "CASO DE SOPORTE"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "ANTIVIRUS": {
+            "respuestas": [
+                "Para verificar el antivirus: busca el ícono de escudo en la bandeja del sistema. Si no está activo, abre el portal de IT en soporte.empresa.com para reinstalarlo.",
+                "Si tu antivirus muestra una alerta: NO abras el archivo sospechoso, NO hagas clic en enlaces desconocidos, y llama inmediatamente al ext. 200."
+            ],
+            "explica": "Información sobre antivirus corporativo",
+            "otra_pregunta": "¿Tienes alguna alerta específica del antivirus?",
+            "sinonimos": ["VIRUS", "MALWARE", "SEGURIDAD", "PROTECCION"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "TELEFONO": {
+            "respuestas": [
+                "Para problemas con el teléfono IP: reinicia el aparato desconectando el cable de red 10 segundos. Si persiste, llama desde tu celular al ext. 200.",
+                "Teléfonos IP: Si no tiene tono, verifica el cable, reinicia el equipo. Para nuevas extensiones o configuración contacta soporte ext. 200."
+            ],
+            "explica": "Soporte para telefonía IP",
+            "otra_pregunta": "¿El problema es con llamadas internas o externas?",
+            "sinonimos": ["EXTENSION", "TELEFONIA", "IP PHONE", "NO DA TONO"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "GRACIAS": {
+            "respuestas": [
+                "¡Con gusto! Si el problema persiste no dudes en crear un ticket o llamar al ext. 200. ¡Que tengas un buen día!",
+                "¡De nada! Para cualquier otro problema técnico aquí estamos. ¡Hasta pronto!"
+            ],
+            "explica": "Agradecimiento del usuario",
+            "otra_pregunta": "",
+            "sinonimos": ["MUCHAS GRACIAS", "AGRADECIDO", "THANKS"],
+            "intencion": "agradecimiento"
+        }
+    },
+    {
+        "ADIOS": {
+            "respuestas": [
+                "¡Hasta luego! Recuerda que puedes crear tickets en helpdesk.empresa.com o llamar al ext. 200. 🛠️",
+                "¡Adiós! Si necesitas más ayuda técnica estaremos aquí."
+            ],
+            "explica": "Despedida",
+            "otra_pregunta": "",
+            "sinonimos": ["HASTA LUEGO", "CHAO", "BYE", "NOS VEMOS"],
+            "intencion": "despedida"
+        }
+    }
+]

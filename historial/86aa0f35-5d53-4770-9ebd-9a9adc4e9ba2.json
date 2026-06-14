@@ -1,0 +1,21 @@
+{
+  "session_id": "86aa0f35-5d53-4770-9ebd-9a9adc4e9ba2",
+  "area": "clinica",
+  "inicio": "2026-06-14T18:45:13.214685",
+  "ultimo_acceso": "2026-06-14T18:45:13.215975",
+  "total_mensajes": 2,
+  "mensajes": [
+    {
+      "rol": "usuario",
+      "mensaje": "cita medica",
+      "fuente": "",
+      "timestamp": "2026-06-14T18:45:13.214732"
+    },
+    {
+      "rol": "adan",
+      "mensaje": "Para agendar su cita puede llamar al 📞 555-1234 de lunes a viernes de 7:00 AM a 6:00 PM, o sábados de 8:00 AM a 12:00 PM.\n\n¿Necesita información sobre qué documentos traer?",
+      "fuente": "local",
+      "timestamp": "2026-06-14T18:45:13.215943"
+    }
+  ]
+}

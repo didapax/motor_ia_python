@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADAN Admin — Panel de Administración</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/admin.css">
+</head>
+<body>
+    <div class="bg-grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <!-- ─── Login Screen ─── -->
+    <div class="login-screen" id="loginScreen">
+        <div class="login-card">
+            <div class="login-logo">
+                <div class="logo-icon" style="width:64px;height:64px;">
+                    <span class="logo-letter" style="font-size:32px">A</span>
+                    <div class="logo-pulse"></div>
+                </div>
+                <h1>Panel de Administración</h1>
+                <p>Selecciona el área e ingresa el PIN de acceso</p>
+            </div>
+            <div class="login-form">
+                <div class="form-group">
+                    <label class="form-label">Área</label>
+                    <select id="loginArea" class="form-input form-select">
+                        <option value="">Cargando áreas...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">PIN de administrador</label>
+                    <input type="password" id="loginPin" class="form-input" placeholder="••••" maxlength="8">
+                </div>
+                <div id="loginError" class="login-error" style="display:none"></div>
+                <button class="btn-primary btn-full" id="btnLogin">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Ingresar
+                </button>
+                <a href="/" class="login-back">← Volver al chat</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─── Admin Panel ─── -->
+    <div class="admin-panel" id="adminPanel" style="display:none">
+
+        <!-- Top Bar -->
+        <header class="admin-topbar">
+            <div class="admin-brand">
+                <div class="logo-icon" style="width:36px;height:36px;" id="adminLogoIcon">
+                    <span class="logo-letter" style="font-size:18px" id="adminLogoLetter">A</span>
+                </div>
+                <div>
+                    <span class="admin-title" id="adminNombre">ADAN Admin</span>
+                    <span class="admin-area-tag" id="adminAreaTag">general</span>
+                </div>
+            </div>
+            <nav class="admin-nav">
+                <button class="admin-nav-btn active" data-tab="entradas">📚 Base de Datos</button>
+                <button class="admin-nav-btn" data-tab="historial">📋 Historial</button>
+                <button class="admin-nav-btn" data-tab="config">⚙️ Configuración</button>
+            </nav>
+            <div class="admin-topbar-actions">
+                <a href="/?area=general" id="linkChat" class="btn-secondary btn-sm" target="_blank">← Ver Chat</a>
+                <button class="btn-secondary btn-sm" id="btnCerrarSesion">Salir</button>
+            </div>
+        </header>
+
+        <div class="admin-body">
+
+            <!-- ─── Tab: Entradas ─── -->
+            <div class="admin-tab" id="tab-entradas">
+                <div class="admin-section-header">
+                    <div>
+                        <h2>Base de Conocimiento</h2>
+                        <p class="admin-subtitle" id="statsEntradas">0 entradas · 0 sinónimos</p>
+                    </div>
+                    <div class="section-actions">
+                        <button class="btn-secondary btn-sm" id="btnExportar">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            Exportar CSV
+                        </button>
+                        <label class="btn-secondary btn-sm btn-upload" for="fileImportar">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                            Importar CSV
+                        </label>
+                        <input type="file" id="fileImportar" accept=".csv" style="display:none">
+                        <button class="btn-primary btn-sm" id="btnNuevaEntrada">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                            Nueva entrada
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Buscar -->
+                <div class="search-bar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <input type="text" id="buscarEntrada" placeholder="Buscar entrada..." class="search-input">
+                </div>
+
+                <!-- Tabla -->
+                <div class="tabla-wrapper">
+                    <table class="admin-tabla">
+                        <thead>
+                            <tr>
+                                <th>Clave</th>
+                                <th>Respuesta principal</th>
+                                <th>Sinónimos</th>
+                                <th>Intención</th>
+                                <th style="width:100px">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaEntradas">
+                            <tr><td colspan="5" class="tabla-vacia">Cargando...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Info CSV -->
+                <div class="csv-info">
+                    <strong>Formato CSV para importar:</strong>
+                    <code>clave,explica,respuesta,otra_pregunta,sinonimos</code>
+                    — sinónimos separados por <code>|</code>
+                </div>
+            </div>
+
+            <!-- ─── Tab: Historial ─── -->
+            <div class="admin-tab" id="tab-historial" style="display:none">
+                <div class="admin-section-header">
+                    <div>
+                        <h2>Historial de Conversaciones</h2>
+                        <p class="admin-subtitle">Registros de sesiones del área activa</p>
+                    </div>
+                    <button class="btn-secondary btn-sm" id="btnRefreshHistorial">↻ Actualizar</button>
+                </div>
+                <div class="historial-grid" id="historialGrid">
+                    <p class="tabla-vacia">Cargando historial...</p>
+                </div>
+                <div class="historial-detalle" id="historialDetalle" style="display:none">
+                    <div class="historial-detalle-header">
+                        <h3 id="historialDetalleTitle">Conversación</h3>
+                        <button class="btn-secondary btn-sm" id="btnCerrarDetalle">Cerrar</button>
+                    </div>
+                    <div class="historial-mensajes" id="historialMensajes"></div>
+                </div>
+            </div>
+
+            <!-- ─── Tab: Configuración ─── -->
+            <div class="admin-tab" id="tab-config" style="display:none">
+                <div class="admin-section-header">
+                    <div>
+                        <h2>Configuración del Área</h2>
+                        <p class="admin-subtitle">Personaliza el asistente de esta área</p>
+                    </div>
+                    <button class="btn-primary btn-sm" id="btnGuardarConfig">Guardar cambios</button>
+                </div>
+                <div class="config-grid">
+                    <div class="config-card">
+                        <h3 class="config-card-title">🎨 Identidad</h3>
+                        <div class="form-group">
+                            <label class="form-label">Nombre del asistente</label>
+                            <input type="text" id="cfgNombre" class="form-input" placeholder="Ej: Asistente Clínica San José">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Descripción</label>
+                            <input type="text" id="cfgDesc" class="form-input" placeholder="Ej: Atención al paciente">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Emoji / Avatar</label>
+                            <input type="text" id="cfgAvatar" class="form-input" placeholder="Ej: 🏥" maxlength="4">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Color primario</label>
+                            <div style="display:flex;gap:10px;align-items:center">
+                                <input type="color" id="cfgColor" style="width:48px;height:36px;border:none;background:none;cursor:pointer">
+                                <input type="text" id="cfgColorHex" class="form-input" placeholder="#7c6af7" style="flex:1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="config-card">
+                        <h3 class="config-card-title">🛡️ Restricciones</h3>
+                        <div class="form-group">
+                            <label class="form-label">Tema del área (dejar vacío para sin restricción)</label>
+                            <input type="text" id="cfgTema" class="form-input" placeholder="Ej: salud, clínica y medicina">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Mensaje cuando la pregunta está fuera del área</label>
+                            <textarea id="cfgMsgFuera" class="form-input form-textarea" placeholder="Ej: Ese tema está fuera de mi área..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label toggle-label">
+                                <input type="checkbox" id="cfgBusquedaWeb" class="toggle-check">
+                                <span class="toggle-slider"></span>
+                                Permitir búsqueda web (Wikipedia/DuckDuckGo)
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label toggle-label">
+                                <input type="checkbox" id="cfgAprendizaje" class="toggle-check">
+                                <span class="toggle-slider"></span>
+                                Permitir que usuarios enseñen al asistente
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="config-card">
+                        <h3 class="config-card-title">🔐 Seguridad</h3>
+                        <div class="form-group">
+                            <label class="form-label">Cambiar PIN de administrador</label>
+                            <input type="password" id="cfgPinNuevo" class="form-input" placeholder="Nuevo PIN (dejar vacío para no cambiar)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal: Entrada (crear/editar) -->
+    <div class="modal-overlay" id="modalEntrada">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalEntradaTitulo">Nueva entrada</h2>
+                <button class="modal-close" id="modalEntradaClose">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="entradaModoEdicion" value="">
+                <div class="form-group">
+                    <label class="form-label">Clave / Frase *</label>
+                    <input type="text" id="entClave" class="form-input" placeholder="Ej: HORARIOS DE ATENCION">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Respuesta breve *</label>
+                    <input type="text" id="entExplica" class="form-input" placeholder="Respuesta corta para cuando ADAN resume">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Respuesta completa *</label>
+                    <textarea id="entRespuesta" class="form-input form-textarea" placeholder="Respuesta detallada que ADAN mostrará al usuario..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Pregunta de seguimiento</label>
+                    <input type="text" id="entOtra" class="form-input" placeholder="Ej: ¿Necesita más información?">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Sinónimos (separados por |)</label>
+                    <input type="text" id="entSinonimos" class="form-input" placeholder="Ej: horario|cuando abren|a qué hora">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="btnCancelarEntrada">Cancelar</button>
+                <button class="btn-primary" id="btnGuardarEntrada">Guardar entrada</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script src="/static/admin.js"></script>
+</body>
+</html>

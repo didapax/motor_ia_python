@@ -1,0 +1,12 @@
+{
+    "nombre": "Asistente ADAN",
+    "descripcion": "Asistente virtual de propósito general",
+    "avatar": "🤖",
+    "color_primario": "#7c6af7",
+    "color_secundario": "#4ecdc4",
+    "tema_restriccion": "",
+    "mensaje_fuera_area": "No encontré información sobre ese tema. ¿Quieres enseñármelo?",
+    "permitir_busqueda_web": true,
+    "permitir_aprendizaje": true,
+    "pin_admin": "1234"
+}

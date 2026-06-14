@@ -1,0 +1,12 @@
+{
+    "nombre": "Soporte Técnico",
+    "descripcion": "Asistente de soporte — Mesa de Ayuda TI",
+    "avatar": "🛠️",
+    "color_primario": "#f59e0b",
+    "color_secundario": "#ef4444",
+    "tema_restriccion": "soporte técnico, sistemas, computadoras y tecnología",
+    "mensaje_fuera_area": "Esa consulta está fuera del área de soporte técnico. Por favor contacta al área correspondiente o abre un ticket en el sistema.",
+    "permitir_busqueda_web": true,
+    "permitir_aprendizaje": true,
+    "pin_admin": "9999"
+}

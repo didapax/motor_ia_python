@@ -1,0 +1,21 @@
+{
+  "session_id": "09073ebe-3f94-4bb9-839e-c503094851c1",
+  "area": "soporte",
+  "inicio": "2026-06-14T18:45:13.217081",
+  "ultimo_acceso": "2026-06-14T18:45:13.218029",
+  "total_mensajes": 2,
+  "mensajes": [
+    {
+      "rol": "usuario",
+      "mensaje": "contrasena olvidada",
+      "fuente": "",
+      "timestamp": "2026-06-14T18:45:13.217190"
+    },
+    {
+      "rol": "adan",
+      "mensaje": "Si olvidaste tu contraseña: accede a https://reset.empresa.com o llama a soporte al ext. 200 para que un técnico te asista.\n\n¿Lograste restablecer el acceso?",
+      "fuente": "local",
+      "timestamp": "2026-06-14T18:45:13.218017"
+    }
+  ]
+}
