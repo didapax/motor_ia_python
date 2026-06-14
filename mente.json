@@ -1,65 +1,246 @@
 [
     {
-        "SALUDOS": {
-            "explica": "HOLA",
-            "respuesta": "SALUDOS, ESTOY AQI PARA ATENDER TUS SOLICITUDES",
-            "otra_pregunta": "CUALQUIER PREGUNTA QUE TENGAS ESTOY PARA ATENDERTE"
+        "HOLA": {
+            "respuestas": [
+                "¡Hola! Soy ADAN, tu asistente virtual. ¿En qué puedo ayudarte?",
+                "¡Hola! Estoy aquí para lo que necesites.",
+                "¡Buenas! Dime, ¿qué necesitas?"
+            ],
+            "explica": "Saludo inicial del usuario",
+            "otra_pregunta": "¿En qué puedo ayudarte hoy?",
+            "sinonimos": ["SALUDOS", "HI", "HELLO", "BUENAS", "EY", "OYE", "QUE TAL", "QUE HUBO"],
+            "intencion": "saludo"
         }
     },
     {
-        "HOLA": {
-            "explica": "HOLA",
-            "respuesta": "SALUDOS, ESTOY AQI PARA ATENDER TUS SOLICITUDES",
-            "otra_pregunta": "CUALQUIER PREGUNTA QUE TENGAS ESTOY PARA ATENDERTE"
+        "BUENOS DIAS": {
+            "respuestas": [
+                "¡Buenos días! ¿Cómo puedo ayudarte hoy?",
+                "¡Buenos días! Que tengas un excelente día. ¿En qué te ayudo?"
+            ],
+            "explica": "Saludo matutino",
+            "otra_pregunta": "¿En qué puedo ayudarte?",
+            "sinonimos": ["BUEN DIA", "GOOD MORNING"],
+            "intencion": "saludo"
+        }
+    },
+    {
+        "BUENAS TARDES": {
+            "respuestas": [
+                "¡Buenas tardes! ¿En qué puedo ayudarte?",
+                "¡Buenas tardes! Aquí estoy para asistirte."
+            ],
+            "explica": "Saludo vespertino",
+            "otra_pregunta": "¿Cómo puedo ayudarte?",
+            "sinonimos": ["BUENAS TARDE"],
+            "intencion": "saludo"
+        }
+    },
+    {
+        "BUENAS NOCHES": {
+            "respuestas": [
+                "¡Buenas noches! ¿En qué puedo ayudarte antes de descansar?",
+                "¡Buenas noches! Aquí estoy si me necesitas."
+            ],
+            "explica": "Saludo nocturno",
+            "otra_pregunta": "¿Necesitas algo antes de descansar?",
+            "sinonimos": ["BUENAS NOCHE"],
+            "intencion": "saludo"
+        }
+    },
+    {
+        "COMO ESTAS": {
+            "respuestas": [
+                "¡Funcionando a toda máquina! Listo para ayudarte. ¿Y tú cómo estás?",
+                "Todo bien por aquí, aprendiendo y mejorando. ¿En qué te puedo ayudar?"
+            ],
+            "explica": "Pregunta sobre el estado del asistente",
+            "otra_pregunta": "¿Hay algo en lo que pueda ayudarte?",
+            "sinonimos": ["COMO ANDAS", "COMO TE ENCUENTRAS", "COMO VAS"],
+            "intencion": "pregunta"
         }
     },
     {
         "ADAN": {
-            "explica": "MI NOMBRE ES ADAN",
-            "respuesta": "SOY ADAN UN ASISTENTE VIRTUAL",
-            "otra_pregunta": "CUALQUIER PREGUNTA QUE TENGAS ESTOY PARA ATENDERTE"
-        }
-    },
-    {
-        "EXIT": {
-            "explica": "DESEAS SALIR",
-            "respuesta": "ESTERE AQUI POR SI ME NECESITAS",
-            "otra_pregunta": "QUE LA PASES BIEN"
-        }
-    },
-    {
-        "GRACIAS": {
-            "explica": "DE NADA",
-            "respuesta": "DE NADA, ESTOY AQUI PARA AYUDARTE",
-            "otra_pregunta": "CUALQUIER COSA NO DUDES EN PREGUNTAR"
-        }
-    },
-    {
-        "AGRADECIDO": {
-            "explica": "DE NADA",
-            "respuesta": "DE NADA, ESTOY AQUI PARA AYUDARTE",
-            "otra_pregunta": "CUALQUIER COSA NO DUDES EN PREGUNTAR"
-        }
-    },
-    {
-        "COMO TE LLAMAS": {
-            "explica": "ADAN",
-            "respuesta": "ADAN ES M NIMBRE, SOY UN ASISTENTE VIRTUAL",
-            "otra_pregunta": "SI TIENES ALGUNA PREGUNTA ESTOY PARA AYUDARTE"
+            "respuestas": [
+                "Soy ADAN, un asistente virtual diseñado para ayudarte con información y responder tus preguntas.",
+                "Me llamo ADAN. Soy un motor de inteligencia artificial conversacional. ¿En qué puedo ayudarte?"
+            ],
+            "explica": "Identidad del asistente ADAN",
+            "otra_pregunta": "¿Deseas saber algo más sobre mí o puedo ayudarte con otra cosa?",
+            "sinonimos": [],
+            "intencion": "pregunta"
         }
     },
     {
         "QUIEN ERES": {
-            "explica": "ADAN",
-            "respuesta": "ADAN, SAOY UN ASISTENTE VIRTUAL",
-            "otra_pregunta": "ESTOY PARA AYUDARTE NO DUDES EN PREGUNTAR"
+            "respuestas": [
+                "Soy ADAN, un asistente virtual inteligente. Puedo responder preguntas, buscar información y aprender de ti.",
+                "Me llamo ADAN. Soy un asistente conversacional creado para ayudarte."
+            ],
+            "explica": "Pregunta de identidad",
+            "otra_pregunta": "¿En qué puedo ayudarte?",
+            "sinonimos": ["QUE ERES", "QUE ERES TU"],
+            "intencion": "pregunta"
         }
     },
     {
-        "CUAL ES TU NOMBRE": {
-            "explica": "ADAN",
-            "respuesta": "ADAN, SAOY UN ASISTENTE VIRTUAL",
-            "otra_pregunta": "ESTOY PARA AYUDARTE NO DUDES EN PREGUNTAR"
+        "COMO TE LLAMAS": {
+            "respuestas": [
+                "Mi nombre es ADAN. ¿Y tú cómo te llamas?",
+                "Me llamo ADAN, a tu servicio. ¿Cómo puedo ayudarte?"
+            ],
+            "explica": "Pregunta sobre el nombre del asistente",
+            "otra_pregunta": "¿Hay algo en lo que pueda ayudarte?",
+            "sinonimos": ["CUAL ES TU NOMBRE", "TU NOMBRE", "DIME TU NOMBRE"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "GRACIAS": {
+            "respuestas": [
+                "¡De nada! Estoy aquí para ayudarte.",
+                "Con mucho gusto. ¿Hay algo más en lo que pueda asistirte?",
+                "¡No hay de qué! Para eso estoy."
+            ],
+            "explica": "Expresión de agradecimiento del usuario",
+            "otra_pregunta": "¿Puedo ayudarte con algo más?",
+            "sinonimos": ["MUCHAS GRACIAS", "TE LO AGRADEZCO", "AGRADECIDO", "AGRADECIDA", "THANKS"],
+            "intencion": "agradecimiento"
+        }
+    },
+    {
+        "ADIOS": {
+            "respuestas": [
+                "¡Hasta luego! Ha sido un placer ayudarte. ¡Vuelve cuando quieras!",
+                "¡Adiós! Que tengas un excelente día. Aquí estaré cuando me necesites.",
+                "¡Hasta pronto! Fue un gusto charlar contigo."
+            ],
+            "explica": "Despedida del usuario",
+            "otra_pregunta": "",
+            "sinonimos": ["HASTA LUEGO", "CHAO", "BYE", "NOS VEMOS", "HASTA PRONTO", "CIAO", "SALIR"],
+            "intencion": "despedida"
+        }
+    },
+    {
+        "QUE PUEDES HACER": {
+            "respuestas": [
+                "Puedo responder preguntas, buscar información en Wikipedia, aprender nuevas cosas que me enseñes y mantener una conversación contigo.",
+                "Tengo varias capacidades: responder preguntas desde mi base de conocimiento, buscar en internet cuando no sé algo, y aprender de ti."
+            ],
+            "explica": "Capacidades del asistente",
+            "otra_pregunta": "¿Quieres que busque información sobre algún tema específico?",
+            "sinonimos": ["QUE SABES HACER", "PARA QUE SIRVES", "QUE HACES", "CUALES SON TUS FUNCIONES"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "AYUDA": {
+            "respuestas": [
+                "Puedes preguntarme sobre cualquier tema. Si no sé la respuesta, buscaré en internet o te pediré que me lo enseñes.",
+                "Estoy aquí para ayudarte. Puedes hacerme preguntas, pedirme información o enseñarme cosas nuevas."
+            ],
+            "explica": "Solicitud de ayuda general",
+            "otra_pregunta": "¿Sobre qué tema necesitas ayuda?",
+            "sinonimos": ["SOCORRO", "NECESITO AYUDA", "ASISTENCIA"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "INTELIGENCIA ARTIFICIAL": {
+            "respuestas": [
+                "La inteligencia artificial es una rama de la informática que busca crear sistemas capaces de realizar tareas que normalmente requieren inteligencia humana.",
+                "La IA es la simulación de procesos de inteligencia humana por parte de máquinas, especialmente sistemas informáticos."
+            ],
+            "explica": "Definición de inteligencia artificial",
+            "otra_pregunta": "¿Deseas saber más sobre algún aspecto de la IA?",
+            "sinonimos": ["IA", "AI", "MACHINE LEARNING", "APRENDIZAJE AUTOMATICO"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "PYTHON": {
+            "respuestas": [
+                "Python es un lenguaje de programación de alto nivel, interpretado y de propósito general, conocido por su sintaxis clara y legible.",
+                "Python es uno de los lenguajes de programación más populares del mundo, ideal para ciencia de datos, IA y desarrollo web."
+            ],
+            "explica": "Lenguaje de programación Python",
+            "otra_pregunta": "¿Quieres saber algo específico sobre Python?",
+            "sinonimos": ["LENGUAJE PYTHON", "PROGRAMACION EN PYTHON"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "TIEMPO": {
+            "respuestas": [
+                "No tengo acceso al tiempo en tiempo real, pero puedes consultar un servicio meteorológico para saber el clima actual.",
+                "Para conocer el tiempo meteorológico en tu ubicación, te recomiendo usar una app del clima o buscar en internet."
+            ],
+            "explica": "Consulta sobre el tiempo meteorológico",
+            "otra_pregunta": "¿Hay algo más en lo que pueda ayudarte?",
+            "sinonimos": ["CLIMA", "TEMPERATURA", "LLUVIA", "SOL", "PRONOSTICO"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "HORA": {
+            "respuestas": [
+                "No tengo acceso directo al reloj del sistema en la interfaz web, pero puedes ver la hora en la esquina de tu pantalla.",
+                "Para conocer la hora exacta, mira el reloj de tu dispositivo. ¿En qué más puedo ayudarte?"
+            ],
+            "explica": "Consulta sobre la hora actual",
+            "otra_pregunta": "¿Necesitas algo más?",
+            "sinonimos": ["QUE HORA ES", "DIME LA HORA", "HORA ACTUAL"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "CHISTE": {
+            "respuestas": [
+                "¿Por qué los programadores prefieren el frío? Porque tienen miedo a los bugs (bichos). 😄",
+                "¿Qué le dijo el 0 al 8? ¡Bonito cinturón! 😂",
+                "Un programador va al supermercado. Su pareja le dice: 'Trae una barra de pan y si hay huevos trae una docena'. El programador vuelve con 12 barras de pan porque había huevos. 🤣"
+            ],
+            "explica": "El usuario quiere escuchar un chiste",
+            "otra_pregunta": "¿Quieres escuchar otro chiste?",
+            "sinonimos": ["CUENTAME UN CHISTE", "HAZME REIR", "ALGO GRACIOSO", "BROMA"],
+            "intencion": "saludo"
+        }
+    },
+    {
+        "MUSICA": {
+            "respuestas": [
+                "La música es el arte de organizar los sonidos en el tiempo. Es una de las expresiones artísticas más antiguas de la humanidad.",
+                "La música tiene el poder de evocar emociones, recuerdos y unir a las personas. ¿Tienes algún género musical favorito?"
+            ],
+            "explica": "Pregunta sobre música",
+            "otra_pregunta": "¿Quieres saber sobre algún artista o género musical específico?",
+            "sinonimos": ["CANCION", "CANCIONES", "ARTISTA", "BANDA", "ALBUM"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "COLOMBIA": {
+            "respuestas": [
+                "Colombia es un país ubicado en el noroeste de América del Sur, conocido por su biodiversidad, cultura vibrante y café de alta calidad.",
+                "Colombia limita con Venezuela, Brasil, Perú, Ecuador y Panamá. Su capital es Bogotá y tiene una rica diversidad cultural."
+            ],
+            "explica": "Información sobre Colombia",
+            "otra_pregunta": "¿Quieres saber algo específico sobre Colombia?",
+            "sinonimos": ["COLOMBIANO", "COLOMBIANA", "COLOMBIA"],
+            "intencion": "pregunta"
+        }
+    },
+    {
+        "INTERNET": {
+            "respuestas": [
+                "Internet es una red global de computadoras interconectadas que permite el intercambio de información a nivel mundial.",
+                "La internet es la infraestructura tecnológica que conecta millones de dispositivos en todo el mundo para compartir datos y comunicarse."
+            ],
+            "explica": "Definición de internet",
+            "otra_pregunta": "¿Quieres saber algo más sobre tecnología?",
+            "sinonimos": ["WEB", "RED", "LA WEB", "WORLD WIDE WEB"],
+            "intencion": "pregunta"
         }
     }
 ]
